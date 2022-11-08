@@ -1,10 +1,12 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Login = () => {
     const [error, setError] = useState('');
-    const { login, setLoading } = useContext(AuthContext);
+    const { login, setLoading, providerLogin } = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
@@ -34,6 +36,18 @@ const Login = () => {
         })
     };
 
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+                if(user){
+                    navigate(from, {replace : true});
+                   }
+            })
+            .catch(error => console.error(error));
+    }
+
 
     return (
         <div className="hero w-full my-5">
@@ -61,7 +75,7 @@ const Login = () => {
                         <p className='text-red-500'>{error}</p>
                     </div>
                     <div className="form-control mt-6">
-                        <input className="btn btn-primary w-96" type="submit" value="Login With Google" />
+                        <input onClick={handleGoogleSignIn} className="btn btn-primary w-96" type="submit" value="Login With Google" />
                     </div>
                 </form>
                 <p className='text-center'>New to Here. Please <Link className='text-orange-600 font-bold' to='/signup'>Sign Up</Link></p>
