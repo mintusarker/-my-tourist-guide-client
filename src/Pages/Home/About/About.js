@@ -3,7 +3,7 @@ import travel3 from '../../../assets/travel3.jpg'
 
 const About = () => {
     return (
-        <div>
+        
             <div className="hero w-full p-10 bg-slate-100">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img alt='' src={travel3} className="max-w-sm h-96 w-full rounded-lg shadow-2xl" />
@@ -17,7 +17,6 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 
