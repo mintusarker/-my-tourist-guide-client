@@ -14,6 +14,7 @@ const Navber = () => {
 
     const buttonItems = <>
         <li><Link to='/'>Home</Link></li>
+        <li><Link to='/blog'>Blog</Link></li>
         <li><Link to='/signup'>Sign Up</Link></li>
         {
             user?.email ?
