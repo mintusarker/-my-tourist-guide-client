@@ -1,14 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthProvider';
 
 const SignUp = () => {
+
+    const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate()
+
+    const handleSignUp = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            form.reset()
+            navigate('/')
+        })
+        .catch(error => console.error(error))
+    }
+
     return (
         <div>
             <div className="hero w-full my-5">
                 <div className="hero-content">
                     <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100 py-20">
                         <h1 className="text-5xl text-center text-blue-400 font-semibold">Sign Up</h1>
-                        <form className="card-body">
+                        <form onSubmit={handleSignUp} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
