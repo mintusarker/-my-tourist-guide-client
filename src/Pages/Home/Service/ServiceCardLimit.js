@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ServiceCardLimit = ({service}) => {
-    const { _id, img, price, title, description } = service;
+    const {  img, price, title, description } = service;
     return (
         <div className="card card-compact my-10 bg-base-100 shadow-xl">
             <figure><img className='h-80' src={img} alt="Shoes" /></figure>

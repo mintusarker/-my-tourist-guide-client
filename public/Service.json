@@ -1,6 +1,5 @@
 [
     {
-        "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
         "service_id": "04",
         "title": "Cox's Bazar Sea Beach Tour",
         "img": "https://prod-media-eng.dhakatribune.com/uploads/2018/12/cox-tourist-pic-03-1543844187965.jpg",
@@ -9,7 +8,6 @@
        
     },
     {
-        "_id": "0282e0e58a5c404fbd15261f11c2ab6b",
         "service_id": "05",
         "title": "Kuakata Sea Beach Tour",
         "img": "http://travelandynews.com/wp-content/uploads/2020/09/Bangladesh-Kuakata-beach.jpg",
@@ -17,7 +15,6 @@
         "description": "Kuakata is a scenic travel paradise in the southern part of Bangladesh, known as the 'Sagar Kannya' which means “Daughter of Sea”. It is one of the most beautiful and captivating places for traveling and leisure travelers. Not just in the country, Kuakata is now known all over the world. Standing at the same place on the beach, anyone can see the sunrise and sunset. Kuakata has a wide reputation for breathtaking natural scenic beauty. Kuakata is a place of pilgrimage for Hindu and Buddhist communities. Innumerable devotees arrive here at the festivals of 'Rush Purnima' and 'Maghi Purnima'.On these occasions the pilgrims take holy baths at the bay and participate in the traditional fairs. One may visit a 100-year-old Buddhist temple where the statue of Goutama Buddha and two 200-year-old wells are located."
     },
     {
-        "_id": "f69a695f037cd9484cecaea37ca71011",
         "service_id": "01",
         "title": "Saint Martine Island Tour",
         "img": "https://media-cdn.tripadvisor.com/media/photo-s/0d/13/44/69/coral-island.jpg",
@@ -25,7 +22,6 @@
         "description": "St. Martin's Island is a small island (area only 3 km2) in the northeastern part of the Bay of Bengal, about 9 km south of the tip of the Cox's Bazar-Teknaf peninsula, and forming the southernmost part of Bangladesh. There is a small adjoining island that is separated at high tide, called Chera Dwip. It is about 8 kilometers (5 miles) west of the northwest coast of Myanmar, at the mouth of the Naf River.During the rainy season, because of the dangerous conditions on the Bay of Bengal, the inhabitants have no scope to go to the mainland (Teknaf) and their life can become dangerous. The best weather is usually between November and February; this is the major tourist season.A number of efforts have been proposed to preserve the several endangered species of turtles that nest on the island, as well as the corals, some of which are found only on Narikel Jinjira.The only way to reach St. Martin's Island is by water transportation: boats and ships (mostly for tourists) from Cox Bazar and Teknaf."    
     },
     {
-        "_id": "f69a695f037cd9484cecaea37ca71012",
         "service_id": "02",
         "title": "Rangamati Hill Track Tour",
         "img": "https://bd-info.com/wp-content/uploads/2022/04/rangamati-Sajek-valley.jpg",
@@ -34,7 +30,6 @@
        
     },
     {
-        "_id": "11468ed61aee84de492a8b04158a22f9",
         "service_id": "03",
         "title": "Sundarban Tour",
         "img": "https://mpp.nls.ac.in/blog/wp-content/uploads/2020/07/Beauty_of_Sundarban_river02-scaled.jpg",
@@ -43,7 +38,6 @@
 
     },
     {
-        "_id": "11468ed61aee84de492a8b04158a22f0",
         "service_id": "06",
         "title": "Bandarban Hill Track Tour",
         "img": "https://travelkd.com/wp-content/uploads/2022/01/Nilgiri-Bandarban.jpg",

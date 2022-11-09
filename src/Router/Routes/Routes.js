@@ -1,6 +1,7 @@
 import Main from "../../Layout/Main";
 import Blogs from "../../Pages/Blog/Blogs";
 import Home from "../../Pages/Home/Home/Home";
+import AllService from "../../Pages/Home/Service/AllService";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path : '/blog',
                 element : <Blogs></Blogs>
+            },
+            {
+                path : '/allService',
+                element: <AllService></AllService>
             }
         ]
      }
