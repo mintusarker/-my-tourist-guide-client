@@ -11,7 +11,7 @@ const AllCard = ({service}) => {
                     <p className='text-lg'>{description.slice(0,100)+ '....'}</p>
                     <p className='text-xl text-orange-600 font-semibold'>price : ${price}</p>
                     <div className="card-actions justify-end">
-                        <Link><button className="btn btn-primary">Checkout</button>
+                        <Link><button className="btn btn-primary">Booking</button>
                         </Link>
                     </div>
                 </div>
