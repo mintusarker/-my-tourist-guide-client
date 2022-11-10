@@ -28,10 +28,12 @@ const Navber = () => {
                     </li>
                 </>
                 :
-                <li><Link to='/login'>Login</Link></li>
+                <>
+                    <li><Link to='/login'>Login</Link></li>
+                </>
+
         }
     </>
-
 
     return (
         <div>

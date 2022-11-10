@@ -9,7 +9,7 @@ const UpdateReview = () => {
     const handleUpdateUser = id =>{
         // console.log(user);
         fetch(`http://localhost:5000/service/${storeReview._id}` ,{
-            method: 'PUT',
+            method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
             },

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../Context/AuthProvider';
 import ReviewSet from './ReviewSet';
 
@@ -12,6 +13,7 @@ const MyReview = () => {
             .then(data => setReviews(data))
     }, [user?.email])
 
+    // const notify = () => toast('Here is your toast.');
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this order');
@@ -23,7 +25,7 @@ const MyReview = () => {
                 .then(data => {
                     console.log(data)
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully');
+                        toast.success('Review Deleted Successfully')
                         const remaining = reviews.filter(review => review._id !== id);
                         setReviews(remaining)
                     }
