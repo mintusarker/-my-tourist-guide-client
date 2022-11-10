@@ -12,7 +12,7 @@ const ReviewSet = ({ review, handleDelete, handleUpdateUser }) => {
     }, [service])
 
     return (
-        <tr>
+        <tr className=''>
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">

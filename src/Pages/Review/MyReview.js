@@ -22,21 +22,18 @@ const MyReview = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
-                      if (data.deletedCount > 0) {
+                    if (data.deletedCount > 0) {
                         alert('deleted successfully');
-                        const remaining = reviews.filter(review =>review._id !== id);
+                        const remaining = reviews.filter(review => review._id !== id);
                         setReviews(remaining)
-                      }
-           })
+                    }
+                })
         }
     }
-
-
 
     return (
         <div>
             <h2 className='text-4xl text-center my-5 text-orange-400'>You have total review {reviews.length}</h2>
-
             <div className="overflow-x-auto px-24 mb-10 w-full">
                 <table className="table w-full">
 
