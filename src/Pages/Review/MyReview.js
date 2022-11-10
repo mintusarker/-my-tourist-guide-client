@@ -1,19 +1,28 @@
 import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Context/AuthProvider';
+import useTitle from '../../Hooks/UseTitle';
 import ReviewSet from './ReviewSet';
 
 const MyReview = () => {
-    const { user } = useContext(AuthContext)
+    const { user , logOut} = useContext(AuthContext)
     const [reviews, setReviews] = useState([])
+    useTitle("MyReview")
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`)
-            .then(res => res.json())
+        fetch(`http://localhost:5000/review?email=${user?.email}` ,{
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
+            .then(res =>{
+                if(res.status === 401 || res.status === 403){
+                  return logOut();
+                }
+                return res.json()
+            })
             .then(data => setReviews(data))
-    }, [user?.email])
-
-    // const notify = () => toast('Here is your toast.');
+    }, [user?.email, logOut])
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this order');
@@ -23,7 +32,6 @@ const MyReview = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
                     if (data.deletedCount > 0) {
                         toast.success('Review Deleted Successfully')
                         const remaining = reviews.filter(review => review._id !== id);

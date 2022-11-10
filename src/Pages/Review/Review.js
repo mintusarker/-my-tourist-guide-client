@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { Navigate, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import useTitle from '../../Hooks/UseTitle';
 
 const Review = () => {
 
     const { user } = useContext(AuthContext)
     const { title, price, _id } = useLoaderData()
+    useTitle('Review')
 
     if (!user?.email) {
         return Navigate('/')
