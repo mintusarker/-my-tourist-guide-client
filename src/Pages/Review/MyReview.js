@@ -5,19 +5,19 @@ import useTitle from '../../Hooks/UseTitle';
 import ReviewSet from './ReviewSet';
 
 const MyReview = () => {
-    const { user , logOut} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     const [reviews, setReviews] = useState([])
     useTitle("MyReview")
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}` ,{
+        fetch(`https://my-tourist-server.vercel.app/review?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
-            .then(res =>{
-                if(res.status === 401 || res.status === 403){
-                  return logOut();
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logOut();
                 }
                 return res.json()
             })
@@ -27,7 +27,7 @@ const MyReview = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this order');
         if (proceed) {
-            fetch(`http://localhost:5000/review/${id}`, {
+            fetch(`https://my-tourist-server.vercel.app/review/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

@@ -6,29 +6,29 @@ const UpdateReview = () => {
     const storeReview = useLoaderData();
     const [user, setUser] = useState(storeReview)
 
-    const handleUpdateUser = id =>{
+    const handleUpdateUser = id => {
         // console.log(user);
-        fetch(`http://localhost:5000/service/${storeReview._id}` ,{
+        fetch(`https://my-tourist-server.vercel.app/service/${storeReview._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(user)
         })
-        .then(res => res.json())
-        .then(data => {
-        if(data.modifiedCount > 0){
-            alert('user updated');
-            console.log(data);
-        }
-            
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    alert('user updated');
+                    console.log(data);
+                }
+
+            })
     }
 
-    const handleInputChange = event =>{
+    const handleInputChange = event => {
         const field = event.target.name;
         const value = event.target.value;
-        const newUser = {...user};
+        const newUser = { ...user };
         newUser[field] = value;
         setUser(newUser);
     }
@@ -39,9 +39,9 @@ const UpdateReview = () => {
             <h2>Please update: {storeReview.name}</h2>
 
             <form onSubmit={handleUpdateUser}>
-                <input onChange={handleInputChange} defaultValue={storeReview.name} type="text" name="name" placeholder='name' required/>
+                <input onChange={handleInputChange} defaultValue={storeReview.name} type="text" name="name" placeholder='name' required />
                 <br />
-                <input onChange={handleInputChange} defaultValue={storeReview.message} type="text" name="address" placeholder='address' required/>
+                <input onChange={handleInputChange} defaultValue={storeReview.message} type="text" name="address" placeholder='address' required />
                 <br />
                 <br />
                 <button type='submit'>Update User</button>

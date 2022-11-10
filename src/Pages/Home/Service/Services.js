@@ -7,7 +7,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://my-tourist-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -26,7 +26,7 @@ const Services = () => {
                     ></ServiceCardLimit>)
                 }
             </div>
-           <div className='text-center'><Link to='/allService'><button className="btn btn-active  btn-warning  btn-wide">See All</button></Link> </div>
+            <div className='text-center'><Link to='/allService'><button className="btn btn-active  btn-warning  btn-wide">See All</button></Link> </div>
 
         </div>
     );

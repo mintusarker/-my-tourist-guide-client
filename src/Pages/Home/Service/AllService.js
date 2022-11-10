@@ -7,7 +7,7 @@ const AllService = () => {
     useTitle('AllService')
 
     useEffect(() => {
-        fetch('http://localhost:5000/service')
+        fetch('https://my-tourist-server.vercel.app/service')
             .then(res => res.json())
             .then(data => setAllCards(data))
     }, [])
@@ -16,8 +16,8 @@ const AllService = () => {
 
             {
                 allCards?.map(service => <AllCard
-                key ={service._id}
-                service={service}
+                    key={service._id}
+                    service={service}
                 ></AllCard>)
             }
 

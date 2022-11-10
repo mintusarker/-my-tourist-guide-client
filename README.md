@@ -1,3 +1,24 @@
+# Project Name : My-Tourist-Guide
+
+## About Project : 
+
+* This website create base on personal tourist guide service.
+
+* This projects are also completed by tailwind, daisy ui, react router, react hot toast, vanilla Css, react etc.
+
+* The projects also completed by using mongodb database which is special.
+
+* This project have different pages like login, Sign Up, Services, review details etc.
+
+* Using two type of login method like email-password based and with Google.
+
+* This projects responsive for mobile and desktop.
+
+
+Live Website : [https://tourist-guide-61781.web.app/](https://tourist-guide-61781.web.app/)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -14,13 +14,13 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 const { createBrowserRouter } = require("react-router-dom");
 
 const router = createBrowserRouter([
-     {
-        path : '/',
-        element : <Main></Main>,
-        children : [
+    {
+        path: '/',
+        element: <Main></Main>,
+        children: [
             {
                 path: '/',
-                element : <Home></Home>
+                element: <Home></Home>
             },
             {
                 path: '/login',
@@ -31,41 +31,41 @@ const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
-                path : '/blog',
-                element : <Blogs></Blogs>
+                path: '/blog',
+                element: <Blogs></Blogs>
             },
             {
-                path : '/allService',
+                path: '/allService',
                 element: <AllService></AllService>
             },
             {
-                path : '/detail/:id',
-                element : <ViewDetails></ViewDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+                path: '/detail/:id',
+                element: <ViewDetails></ViewDetails>,
+                loader: ({ params }) => fetch(`https://my-tourist-server.vercel.app/service/${params.id}`)
             },
             {
-                path : '/review/:id',
-                element : <Review></Review>,
-                loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+                path: '/review/:id',
+                element: <Review></Review>,
+                loader: ({ params }) => fetch(`https://my-tourist-server.vercel.app/service/${params.id}`)
             },
             {
                 path: '/review',
                 element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
             },
             {
-               path: '/add',
-               element: <PrivateRoute><AddService></AddService></PrivateRoute>
+                path: '/add',
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
-                path : '/update/:id,',
+                path: '/update/:id,',
                 element: <UpdateReview></UpdateReview>,
-                loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+                loader: ({ params }) => fetch(`https://my-tourist-server.vercel.app/service/${params.id}`)
 
             }
         ]
-     },
+    },
 
-     {
+    {
         path: '*',
         element: <div className='text-center text-4xl text-warning m-56 pt-8'>
             <h3> Ops!! Page Not found: 4o4</h3> <p>You provide wrong link .</p>
