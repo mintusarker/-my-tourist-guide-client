@@ -21,7 +21,7 @@ const Navber = () => {
                 <>
 
                     <li><Link to='/review'>My Review</Link></li>
-                    <li><Link to='/service'>Add Service</Link></li>
+                    <li><Link to='/add'>Add Service</Link></li>
 
                     <li>
                         <button onClick={handleLogOut}>Sing Out</button>

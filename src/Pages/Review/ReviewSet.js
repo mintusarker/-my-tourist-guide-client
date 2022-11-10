@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const ReviewSet = ({ review, handleDelete }) => {
+const ReviewSet = ({ review, handleDelete, handleUpdateUser }) => {
     const { _id, serviceName, service, message, customer } = review;
     const [reviewService, setReviewService] = useState({})
 
@@ -40,7 +41,7 @@ const ReviewSet = ({ review, handleDelete }) => {
             </th>
             <th>
                 <label>
-                    <button className='btn btn-warning'>Edit Review</button>
+                    <Link to={`/update/${_id}`}><button className='btn btn-warning'>Edit Review</button></Link>
                     {/* <input type="checkbox" className="checkbox" /> */}
                 </label>
             </th>

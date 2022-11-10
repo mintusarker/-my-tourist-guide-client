@@ -12,6 +12,7 @@ const MyReview = () => {
             .then(data => setReviews(data))
     }, [user?.email])
 
+
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this order');
         if (proceed) {

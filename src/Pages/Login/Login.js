@@ -2,12 +2,14 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import useTitle from '../../Hooks/UseTitle';
 
 const Login = () => {
     const [error, setError] = useState('');
     const { login, setLoading, providerLogin } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const location = useLocation();
+    useTitle('Login')
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
 

@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import useTitle from '../../Hooks/UseTitle';
 
 const SignUp = () => {
     const [error, setError] = useState('');
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate()
+    useTitle('Sign Up')
 
     const handleSignUp = event => {
         event.preventDefault();

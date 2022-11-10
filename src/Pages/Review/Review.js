@@ -55,7 +55,7 @@ const Review = () => {
                     <input type="text" name='name' placeholder="name" defaultValue={user?.displayName} className="input input-bordered input-success w-full my-4" required/>
                     <input type="text" name='email' placeholder="your email" defaultValue={user?.email} className="input input-bordered input-success w-full" readOnly />
                     <textarea name='message' className="textarea textarea-accent my-5" placeholder="Your review put here" required></textarea>
-                    <div className='text-center'><input className='btn btn-secondary w-40' type="submit" value="review submit"/></div>
+                    <div className='text-center'><input className='btn btn-secondary w-40' type="submit" value="Review submit"/></div>
                 </div>
             </form>
         </div>
