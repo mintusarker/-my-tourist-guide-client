@@ -43,8 +43,8 @@ const MyReview = () => {
 
     return (
         <div>
-            <h2 className='text-4xl text-center my-5 text-orange-400'>You have total review {reviews.length}</h2>
-            <div className="overflow-x-auto px-24 mb-10 w-full">
+            <h2 className='text-4xl text-center my-5 text-orange-400'>You have total review : {reviews.length}</h2>
+            <div className="overflow-x-auto px-24 pb-44 mb-10 w-full">
                 <table className="table w-full">
 
                     <thead>
@@ -54,16 +54,17 @@ const MyReview = () => {
                             <th>Title</th>
                             <th>Review</th>
                             <th>Customer</th>
-                            <th>
+                            <th>Action</th>
+                            {/* <th>
                                 <label>
                                     <input type="checkbox" className="checkbox" />
                                 </label>
-                            </th>
-                            <th>
+                            </th> */}
+                            {/* <th>
                                 <label>
                                     <input type="checkbox" className="checkbox" />
                                 </label>
-                            </th>
+                            </th> */}
                         </tr>
                     </thead>
                     <tbody>

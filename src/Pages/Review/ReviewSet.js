@@ -36,15 +36,13 @@ const ReviewSet = ({ review, handleDelete, handleUpdateUser }) => {
             <th>
                 <label>
                     <button onClick={() => handleDelete(_id)} className='btn btn-warning'>Delete</button>
-                    {/* <input type="checkbox" className="checkbox" /> */}
                 </label>
             </th>
-            <th>
+            {/* <th>
                 <label>
                     <Link to={`/update/${_id}`}><button className='btn btn-warning'>Edit Review</button></Link>
-                    {/* <input type="checkbox" className="checkbox" /> */}
                 </label>
-            </th>
+            </th> */}
 
         </tr>
     );
