@@ -24,7 +24,9 @@ const Login = () => {
                 const user = result.user;
                 // console.log(user);
                 form.reset();
-
+                if (user) {
+                    navigate(from, { replace: true });
+                }
 
                 const currentUser = {
                     email: user.email
@@ -34,21 +36,21 @@ const Login = () => {
 
                 // get jwt token
 
-                fetch('https://my-tourist-server.vercel.app/jwt', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(currentUser)
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-                        localStorage.setItem('token', data.token);
-                        if (user) {
-                            navigate(from, { replace: true });
-                        }
-                    })
+                // fetch('https://my-tourist-server.vercel.app/jwt', {
+                //     method: 'POST',
+                //     headers: {
+                //         'content-type': 'application/json'
+                //     },
+                //     body: JSON.stringify(currentUser)
+                // })
+                //     .then(res => res.json())
+                //     .then(data => {
+                //         console.log(data);
+                //         localStorage.setItem('token', data.token);
+                //         if (user) {
+                //             navigate(from, { replace: true });
+                //         }
+                //     })
 
                 setError('')
             })

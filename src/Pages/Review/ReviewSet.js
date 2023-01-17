@@ -35,14 +35,14 @@ const ReviewSet = ({ review, handleDelete, handleUpdateUser }) => {
             </td>
             <th>
                 <label>
-                    <button onClick={() => handleDelete(_id)} className='btn btn-warning'>Delete</button>
+                    <button onClick={() => handleDelete(_id)} className='btn btn-sm btn-warning'>Delete</button>
                 </label>
             </th>
-            {/* <th>
+            <th>
                 <label>
-                    <Link to={`/update/${_id}`}><button className='btn btn-warning'>Edit Review</button></Link>
+                    <Link to={`/update/${_id}`}><button className='btn btn-sm btn-warning'>Edit Review</button></Link>
                 </label>
-            </th> */}
+            </th>
 
         </tr>
     );

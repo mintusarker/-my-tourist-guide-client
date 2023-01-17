@@ -4,15 +4,15 @@
 
 * This website create base on personal tourist guide service.
 
-* This projects are also completed by tailwind, daisy ui, react router, react hot toast, vanilla Css, react etc.
+* This project is also completed by tailwind, daisy ui, react router, react hot toast, vanilla Css, react etc.
 
-* The projects also completed by using mongodb database which is special.
+* The project also completed by using mongodb database which is special.
 
-* This project have different pages like login, Sign Up, Services, review details etc.
+* This project has different pages like login, Sign Up, Services, review details etc.
 
-* Using two type of login method like email-password based and with Google.
+* Using two types of login method like email-password based and with Google.
 
-* This projects responsive for mobile and desktop.
+* This project is responsive for mobile and desktop.
 
 
 Live Website : [https://tourist-guide-61781.web.app/](https://tourist-guide-61781.web.app/)

@@ -5,27 +5,20 @@ import useTitle from '../../Hooks/UseTitle';
 import ReviewSet from './ReviewSet';
 
 const MyReview = () => {
-    const { user, logOut } = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     const [reviews, setReviews] = useState([])
+    console.log(reviews)
     useTitle("MyReview")
 
     useEffect(() => {
-        fetch(`https://my-tourist-server.vercel.app/review?email=${user?.email}`, {
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('token')}`
-            }
-        })
-            .then(res => {
-                if (res.status === 401 || res.status === 403) {
-                    return logOut();
-                }
-                return res.json()
-            })
+        fetch(`https://my-tourist-server.vercel.app/reviews?email=${user?.email}`)
+            .then(res => res.json())
             .then(data => setReviews(data))
-    }, [user?.email, logOut])
+    }, [user?.email])
+
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure, you want to delete this order');
+        const proceed = window.confirm('Are you sure, you want to delete this review');
         if (proceed) {
             fetch(`https://my-tourist-server.vercel.app/review/${id}`, {
                 method: 'DELETE',
@@ -54,21 +47,13 @@ const MyReview = () => {
                             <th>Title</th>
                             <th>Review</th>
                             <th>Customer</th>
-                            <th>Action</th>
-                            {/* <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th> */}
-                            {/* <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th> */}
+                            <th>Delete</th>
+                            <th>Update</th>
+    
                         </tr>
                     </thead>
                     <tbody>
-                        {
+                        {reviews &&
                             reviews?.map(review => <ReviewSet
                                 key={review._id}
                                 review={review}
