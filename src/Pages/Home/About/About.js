@@ -4,8 +4,8 @@ import travel3 from '../../../assets/travel3.jpg'
 const About = () => {
     return (
         
-            <div className="hero w-full p-10 pb-28 bg-slate-100">
-                <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="justify-center px-16 w-full pt-16 pb-28 bg-slate-100">
+                <div className="flex flex-col lg:flex-row-reverse">
                     <img alt='' src={travel3} className="max-w-sm h-96 w-full rounded-lg shadow-2xl" />
                     <div>
                         <h1 className="text-4xl font-semibold font-serif mb-5">About Travel</h1>

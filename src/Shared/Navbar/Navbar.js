@@ -36,8 +36,8 @@ const Navbar = () => {
     </>
 
     return (
-        <div>
-            <div className="navbar justify-between px-10 bg-slate-200">
+        <div className=''>
+            <div className="navbar justify-between px-10 bg-slate-300">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost md:hidden lg:hidden">
@@ -47,7 +47,7 @@ const Navbar = () => {
                             {buttonItems}
                         </ul>
                     </div>
-                    <h3 className="btn btn-ghost text-green-800 normal-case text-2xl">My Tourist Guide</h3>
+                    <h3 className="btn btn-ghost text-green-800 normal-case font-serif text-3xl">Tourist Guide</h3>
                 </div>
                 <div className="navbar-center pl-50 hidden md:flex lg:flex">
                     <ul className="menu  text-green-800 menu-horizontal">
