@@ -4,7 +4,7 @@ import travel3 from '../../../assets/travel3.jpg'
 const About = () => {
     return (
         
-            <div className="justify-center px-16 w-full pt-16 pb-28 bg-slate-100">
+            <div className="justify-center px-16 w-full pt-16 pb-20 bg-slate-100">
                 <div className="flex flex-col lg:flex-row-reverse">
                     <img alt='' src={travel3} className="max-w-sm h-96 w-full rounded-lg shadow-2xl" />
                     <div>
