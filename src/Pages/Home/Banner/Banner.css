@@ -1,16 +1,23 @@
-.banner-img:after {
+/* .banner-img:after {
     content: '';
     position: absolute;
-    /* left: 20px; */
-    /* right: 20px; */
     top: 64px;
     width: 100%;
-    height: 450px;
-    display: inline-block;
-    background: linear-gradient(to bottom, #109b86 0%, rgba(21, 21, 21, 0) 80%)
-  }
+    height: 400px;
+    display: inline-bloc/k;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
+  } */
 
   .img-travel{
     width: 100%;
     height: 400px;
+}
+
+
+.banner-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../../assets/travel.jpg') center no-repeat fixed;
+  color: #fff;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  height: 450px;
 }

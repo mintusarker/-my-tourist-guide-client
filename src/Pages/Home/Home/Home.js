@@ -9,6 +9,7 @@ import Opinion from '../extra/Opinion';
 import Contact from '../extra/Contact';
 import WhyChoose from '../extra/WhyChoose';
 import SpecialOffer from '../extra/SpecialOffer';
+import Discount from '../extra/Discount';
 
 const Home = () => {
     useTitle('Home')
@@ -18,6 +19,7 @@ const Home = () => {
             <Services></Services>
             <MorePlace></MorePlace>
             <SpecialOffer></SpecialOffer>
+            <Discount></Discount>
             <WhyChoose></WhyChoose>
             <AboutUs></AboutUs>
             <Opinion></Opinion>
