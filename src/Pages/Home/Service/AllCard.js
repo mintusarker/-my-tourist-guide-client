@@ -9,7 +9,7 @@ const AllCard = ({ service }) => {
             <figure>
             <PhotoProvider>
                     <PhotoView src={img}>
-                    <img className='h-80' src={img} alt="" />
+                    <img style={{width:'100%'}} className='h-80' src={img} alt="" />
                     </PhotoView>
                     </PhotoProvider>
             </figure>

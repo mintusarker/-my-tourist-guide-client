@@ -6,7 +6,7 @@ import { MdOutlineFindReplace } from "react-icons/md";
 const WhyChoose = () => {
     return (
         <div className='px-16 pt-16 bg-slate-100'>
-            <p className='text-center text-3xl font-semibold font-serif'>Why choose our tour packages</p>
+            <p className='text-center text-3xl font-semibold font-serif mt-6'>Why choose our tour packages</p>
             <p className='text-center py-4'>We offer most competitive rates and offers for wonderful and beautiful places.</p>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 <div className='text-center rounded-lg p-6'>

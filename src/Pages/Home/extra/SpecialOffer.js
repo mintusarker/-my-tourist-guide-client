@@ -9,7 +9,7 @@ import { BiRestaurant } from 'react-icons/bi';
 
 const SpecialOffer = () => {
     return (
-        <div className='pt-16 bg-slate-100'>
+        <div className='py-16 bg-slate-100'>
             <p className='text-center text-3xl font-semibold font-serif'>Our Special Tour Offer</p>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 px-16 py-16'>
                 <div className='lg:flex md:flex-row sm:flex-row gap-5'>

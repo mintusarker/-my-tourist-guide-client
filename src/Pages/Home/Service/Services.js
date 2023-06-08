@@ -15,10 +15,10 @@ const Services = () => {
     return (
         <div className='bg-slate-100 py-10'>
             <div className='text-center'>
-                <h2 className="text-4xl pt-8 font-semibold">My service Area</h2>
-                <p className='text-xl py-2 px-8 font-medium'>I try to my best for your travel time. No more Confusion, No more Hesitation. Let's Enjoy.</p>
+                <h2 className="text-4xl pt-8 font-semibold">Our service Area</h2>
+                <p className='text-xl py-2 px-8 font-medium'>We try to my best for your travel time. No more Confusion, No more Hesitation. Let's Enjoy.</p>
             </div>
-            <div className='grid gap-8 px-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid gap-8 px-14 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
                 {
                     services.map(service => <ServiceCardLimit
                         key={service._id}
@@ -26,7 +26,7 @@ const Services = () => {
                     ></ServiceCardLimit>)
                 }
             </div>
-            <div className='text-center'><Link to='/allService'><button className="btn btn-success btn-wide hover:bg-green-500 text-xl">See All</button></Link> </div>
+            <div className='text-center'><Link to='/allService'><button className="btn btn-success btn-wide hover:bg-green-500 text-xl mt-4">See All</button></Link> </div>
 
         </div>
     );

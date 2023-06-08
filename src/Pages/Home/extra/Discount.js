@@ -1,11 +1,10 @@
 import React from 'react';
-import discount1 from '../../../assets/images (2).png'
 import discount from '../../../assets/h2-img-1.png'
 import './Discount.css'
 
 const Discount = () => {
     return (
-        <div className='grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 w-auto align-baseline justify-center py-24 px-16 discount'>
+        <div className='grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 w-auto align-baseline justify-center px-16 discount'>
             <div>
                 <img className='w-auto mx-auto p-9 h-96' src={discount} alt="" />
             </div>
