@@ -16,7 +16,7 @@
 
 .banner-img {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../../assets/travel.jpg') center no-repeat fixed;
-  color: #fff;
+  color: rgb(218, 211, 211);
   padding-top: 80px;
   padding-bottom: 40px;
   height: 450px;

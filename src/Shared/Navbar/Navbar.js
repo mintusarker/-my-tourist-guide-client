@@ -47,10 +47,10 @@ const Navbar = () => {
                             {buttonItems}
                         </ul>
                     </div>
-                    <h3 className="btn btn-ghost text-white normal-case font-serif text-3xl">Tourist Guide</h3>
+                    <h3 className="btn btn-ghost text-slate-300 normal-case font-serif text-3xl">Tourist Guide</h3>
                 </div>
                 <div className="navbar-center pl-50 hidden md:flex lg:flex">
-                    <ul className="menu text-md text-white menu-horizontal">
+                    <ul className="menu text-md text-slate-300 menu-horizontal">
                         {buttonItems}
                     </ul>
                 </div>

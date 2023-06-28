@@ -20,7 +20,7 @@ const Contact = () => {
                 <div className='mx-auto w-auto'>
                     <div className='py-8'>
                         <p className='text-lg'>Have a question?</p>
-                        <span className='text-amber-800'>Email me at mintosarker707@gmail.com</span>
+                        <span className='text-amber-800'>Email us at: mintosarker707@gmail.com</span>
                     </div>
                     <div className='py-10'>
                         <p className='text-lg'>Current Location</p>
